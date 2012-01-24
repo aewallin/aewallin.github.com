@@ -2,6 +2,7 @@
 # https://help.launchpad.net/API/launchpadlib
 import sys
 from launchpadlib.launchpad import Launchpad
+import datetime
 
 def get_archive_data(archive):
     data=[]
@@ -55,6 +56,7 @@ if __name__ == "__main__":
     
     print "<HTML>"
     print "<H1>PPA Statistics</H1>"
+    print "Statistics generated on ",datetime.datetime.now()
     print "<H2>PPA</H2>"
     ppa_data = ["Owner", PPAOWNER, "PPA", PPA]
     print_table(ppa_data,2)
